@@ -4,7 +4,6 @@ import NoteSkeleton from "@/components/note/noteSkeleton";
 
 
 export default function NoteList({data, loading}) {
-    console.log("DATOS",data)
     return (
         <>
             <Stack

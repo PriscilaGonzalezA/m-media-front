@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { Button, Card, CardActions, CardContent, CardMedia, Typography} from "@mui/material";
 
 
-export default function NoteBox({ title, urlImage, description }) {
+export default function NoteBox({ title, urlImage, description, id }) {
     const router = useRouter();
     const url = `${process.env.NEXT_PUBLIC_BACK_IMAGES_URL}/${urlImage}`;
 

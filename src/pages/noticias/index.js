@@ -1,9 +1,12 @@
 import {useEffect, useState} from "react";
 import {getNotesRequest} from "@/utils/generateRequest";
-import {Alert, Box, Container, Grid, Skeleton, Stack} from "@mui/material";
+import {Alert, Container} from "@mui/material";
 import Title from "@/components/utils/title";
-import NoteList from "@/components/note/noteList";
 
+import dynamic from 'next/dynamic';
+const NoteList = dynamic(() => import("@/components/note/noteList"), {
+    ssr: false,
+});
 
 export default function Noticias() {
     const [data, setData] = useState([]);
@@ -11,10 +14,10 @@ export default function Noticias() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        getNewsData();
+        getNotesData();
     }, []);
 
-    const getNewsData = async () => {
+    const getNotesData = async () => {
         setLoading(true)
         setError(null)
         const response = await getNotesRequest();
