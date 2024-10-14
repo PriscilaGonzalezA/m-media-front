@@ -20,7 +20,7 @@ export default function Home() {
     >
       <main className="flex flex-col gap-8 row-start-2 items-center">
         <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <Typography variant="h4" className={'align-middle sm:text-center'}>
+          <Typography variant="h4" className={'align-middle text-center'}>
             Bienvenidos a la sección de noticias de MegaMedia
           </Typography>
         </div>
@@ -33,7 +33,7 @@ export default function Home() {
               height={150}
           />
         </div>
-        <div className="center gap-4 items-center flex-col sm:flex-row sm:text-center">
+        <div className="center gap-4 items-center flex-col sm:flex-row text-center">
           <Link underline="hover" href={'/noticias'}>Haz click aquí para ver la lista de noticias</Link>
         </div>
       </main>

@@ -17,14 +17,14 @@ export default function NoteDetail({note, loading}) {
     }, [note]);
 
     return (
-        <>
+        <Box className={"pb-12"}>
             {loading ?
                 (<Box className={"text-center mt-24"}>
                     <CircularProgress size="3rem" />
                 </Box>) : null
             }
             { note ?
-                <Card className={"md:m-8 m-2"}>
+                <Card className={"md:mt-8 mt-2 md:mx-8 mx-2"}>
                     <CardMedia
                         component="img"
                         alt={note.title}
@@ -60,7 +60,7 @@ export default function NoteDetail({note, loading}) {
                 <>No hay nota</>
             }
 
-        </>
+        </Box>
     )
 
 }
