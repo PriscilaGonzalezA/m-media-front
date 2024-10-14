@@ -36,8 +36,7 @@ export default function NoteBox({ title, urlImage, description, id }) {
                                 WebkitBoxOrient: 'vertical',
                             }}
                 >
-
-                    {description}
+                    <div dangerouslySetInnerHTML={{__html: description}}/>
                 </Typography>
             </CardContent>
             <CardActions className={"float-right"}>
